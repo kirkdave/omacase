@@ -1,0 +1,22 @@
+brew "coreutils"
+brew "eza"
+brew "fzf"
+brew "git"
+brew "libyaml"
+brew "mise"
+brew "neovim"
+brew "readline"
+brew "ripgrep"
+brew "tree-sitter"
+brew "zoxide"
+
+cask "1password"
+cask "nikitabobko/tap/aerospace"
+cask "drawio"
+cask "ghostty"
+cask "google-chrome"
+cask "insomnia"
+
+cask "font-fira-code-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+
