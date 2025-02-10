@@ -55,3 +55,11 @@ opt.undofile = true
 -- decrease update time and mapped sequence wait time
 opt.updatetime = 250
 opt.timeoutlen = 300
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight when yanking text",
+    group = vim.api.nvim_create_augroup("OmacaseYankText", {}),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
