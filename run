@@ -18,3 +18,5 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew bundle --file $OMACASE_DIR/install/brewfile
 for installer in install/*.install.sh; do source $installer; done
 unset installer
+
+desktoppr $HOME/.local/share/omacase/theme/omacase-bg.jpg
