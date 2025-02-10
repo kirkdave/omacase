@@ -42,6 +42,16 @@ return {
             typescript = { "prettier" },
         },
         formatters = {
+            stylua = {
+                args = {
+                    "--search-parent-directories",
+                    "--indent-types",
+                    "Spaces",
+                    "--stdin-filepath",
+                    "$FILENAME",
+                    "-",
+                },
+            },
             prisma_format = {
                 command = "npx prisma format",
                 stdin = false,
