@@ -1,4 +1,4 @@
-echo -e "Configuring tmux"
+echo -e "Configuring Tmux..."
 
 mkdir -p $HOME/.config/tmux
 
