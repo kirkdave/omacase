@@ -25,6 +25,10 @@ return {
                     },
                 },
             },
+            ts_ls = {},
+            cssls = {},
+            html = {},
+            tailwindcss = {},
         }
 
        local tools_ensure_installed = {
