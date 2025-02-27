@@ -19,4 +19,4 @@ brew bundle --file $OMACASE_DIR/install/brewfile
 for installer in install/*.install.sh; do source $installer; done
 unset installer
 
-desktoppr $HOME/.local/share/omacase/theme/omacase-bg.jpg
+desktoppr $HOME/.local/share/omacase/theme/omacase-bg.png
