@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+CLIENT_NAME=$(gum input --prompt "What's the client name? " --placeholder "e.g KirkDave, BJSS")
+PROJECT_NAME=$(gum input --prompt "What's the name of the project? " --placeholder "e.g. super-cool-project")
+
+if [ -d $HOME/Projects/$CLIENT_NAME/$PROJECT_NAME ]; then
+    echo -e "$(tput setf 3)The project $PROJECT_NAME already exists for client $CLIENT_NAME$(tput sgr0)"
+    return
+fi
+
+mkdir -p $HOME/Projects/$CLIENT_NAME/$PROJECT_NAME/{docs,repos,scratch}
+echo -e "Project directory $HOME/Projects/$CLIENT_NAME/$PROJECT_NAME created"
