@@ -12,13 +12,16 @@ brew "tree-sitter"
 
 cask "1password"
 cask "brave-browser"
+cask "drawio"
 cask "ghostty"
 cask "google-chrome"
 cask "insomnia"
+cask "spotify"
 cask "visual-studio-code"
 
 cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 
 vscode "catppuccin.catppuccin-vsc"
+vscode "ms-azuretools.vscode-docker"
 vscode "tamasfe.even-better-toml"
