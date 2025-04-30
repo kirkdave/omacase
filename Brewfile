@@ -8,6 +8,7 @@ brew "libyaml"
 brew "readline"
 brew "ripgrep"
 brew "stow"
+brew "tmux"
 brew "tree-sitter"
 
 cask "1password"

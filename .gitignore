@@ -1,1 +1,4 @@
 .DS_Store
+
+/dotfiles/.config/tmux/tpm
+/dotfiles/.config/tmux/plugins
