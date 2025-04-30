@@ -30,7 +30,7 @@ autoload -Uz compinit && compinit
 
 eval "$(fzf --zsh)"
 # eval "$(zoxide init zsh)"
-# eval "$(mise activate zsh)"
+eval "$(mise activate zsh)"
 
 [[ -f $HOME/.p10k.zsh ]] && source $HOME/.p10k.zsh
 
