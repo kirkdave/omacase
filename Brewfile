@@ -12,6 +12,7 @@ brew "tree-sitter"
 
 cask "1password"
 cask "brave-browser"
+cask "docker"
 cask "drawio"
 cask "ghostty"
 cask "google-chrome"
