@@ -19,6 +19,7 @@ cask "drawio"
 cask "ghostty"
 cask "google-chrome"
 cask "insomnia"
+cask "karabiner-elements"
 cask "spotify"
 cask "visual-studio-code"
 
