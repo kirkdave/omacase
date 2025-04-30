@@ -23,5 +23,6 @@ cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 
 vscode "catppuccin.catppuccin-vsc"
+vscode "hediet.vscode-drawio"
 vscode "ms-azuretools.vscode-docker"
 vscode "tamasfe.even-better-toml"
