@@ -44,4 +44,4 @@ NSTableViewDefaultSizeMode = 1
 tapBehaviour = 1
 
 [[external.command]]
-cmd = "osascript -e 'tell application \"System Events\" to tell every desktop to set picture to \"~/.wallpaper.jpg\" as POSIX file'"
+cmd = "osascript -e 'tell application \"System Events\" to tell every desktop to set picture to \"~/.config/backgrounds/abstract-3d-render.jpg\" as POSIX file'"
