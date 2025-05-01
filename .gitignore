@@ -2,3 +2,5 @@
 
 /dotfiles/.config/tmux/tpm
 /dotfiles/.config/tmux/plugins
+
+/dotfiles/.config/karabiner/automatic_backups
