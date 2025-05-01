@@ -20,6 +20,7 @@ cask "ghostty"
 cask "google-chrome"
 cask "insomnia"
 cask "karabiner-elements"
+cask "nikitabobko/tap/aerospace"
 cask "spotify"
 cask "visual-studio-code"
 
