@@ -211,13 +211,13 @@ automatically-unhide-macos-hidden-apps = false
 # Office apps
 [[on-window-detected]]
     if.app-id = 'com.microsoft.Excel'
-    run = 'move-node-to-workspace B'
+    run = 'move-node-to-workspace O'
 [[on-window-detected]]
     if.app-id = 'com.microsoft.Powerpoint'
-    run = 'move-node-to-workspace B'
+    run = 'move-node-to-workspace O'
 [[on-window-detected]]
     if.app-id = 'com.microsoft.Word'
-    run = 'move-node-to-workspace B'
+    run = 'move-node-to-workspace O'
 
 # Terminals
 [[on-window-detected]]
