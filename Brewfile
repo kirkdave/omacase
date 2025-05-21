@@ -26,7 +26,9 @@ cask "visual-studio-code"
 
 cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-barlow"
 
+vscode "42crunch.vscode-openapi"
 vscode "catppuccin.catppuccin-vsc"
 vscode "hediet.vscode-drawio"
 vscode "ms-azuretools.vscode-docker"

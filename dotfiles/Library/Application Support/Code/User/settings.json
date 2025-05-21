@@ -1,5 +1,7 @@
 {
     "editor.bracketPairColorization.enabled": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
     "editor.fontSize": 15,
     "editor.fontLigatures": true,
@@ -24,4 +26,8 @@
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 18,
     "workbench.tree.renderIndentGuides": "always",
+    "catppuccin.workbenchMode": "flat",
+    "catppuccin.accentColor": "teal",
+    "git.blame.editorDecoration.enabled": true,
+    "hediet.vscode-drawio.resizeImages": null,
 }
