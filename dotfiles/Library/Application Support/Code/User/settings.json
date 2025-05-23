@@ -30,4 +30,8 @@
     "catppuccin.accentColor": "teal",
     "git.blame.editorDecoration.enabled": true,
     "hediet.vscode-drawio.resizeImages": null,
+    "amazonQ.telemetry": false,
+    "amazonQ.suppressPrompts": {
+        "amazonQChatDisclaimer": true
+    },
 }

@@ -29,6 +29,7 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-barlow"
 
 vscode "42crunch.vscode-openapi"
+vscode "amazonwebservices.amazon-q-vscode"
 vscode "catppuccin.catppuccin-vsc"
 vscode "hediet.vscode-drawio"
 vscode "ms-azuretools.vscode-docker"
