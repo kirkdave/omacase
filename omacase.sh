@@ -15,9 +15,15 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew bundle --file $OMACASE_DIR/Brewfile
 
+if [ -f "$OMACASE_DIR/Brewfile.custom" ]; then
+	echo -e "Installing custom apps..."
+	brew bundle --file $OMACASE_DIR/Brewfile.custom
+fi
+
 echo -e "Syncing dotfiles to $HOME..."
 cd $OMACASE_DIR/dotfiles
-stow . --target $HOME --adopt
+stow omacase --target $HOME --adopt
+stow custom --target $HOME --adopt
 cd $OMACASE_DIR
 
 TPM_DIR=$HOME/.config/tmux/plugins/tpm
@@ -34,6 +40,12 @@ tmux send-keys -t tpm_install_session C-s "I" C-m
 tmux kill-session -t tpm_install_session
 
 source install-languages.sh
+
+echo -e "Running any custom configuration files..."
+# the (N) is the glob qualifier, setting NULL_GLOB option for this loop
+for custom in custom/*.sh(N); do
+	source $custom;
+done
 
 echo -e "Applying macOS settings..."
 cutler apply

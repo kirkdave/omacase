@@ -1,6 +1,10 @@
 .DS_Store
 
-/dotfiles/.config/tmux/tpm
-/dotfiles/.config/tmux/plugins
+/dotfiles/omacase/.config/tmux/tpm
+/dotfiles/omacase/.config/tmux/plugins
 
-/dotfiles/.config/karabiner/automatic_backups
+/dotfiles/omacase/.config/karabiner/automatic_backups
+
+/Brewfile.custom
+/custom/*
+!/custom/.gitkeep
