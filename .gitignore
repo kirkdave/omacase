@@ -8,3 +8,7 @@
 /Brewfile.custom
 /custom/*
 !/custom/.gitkeep
+
+/dotfiles/custom/*
+!/dotfiles/custom/.gitkeep
+!/dotfiles/custom/.stow-local-ignore
