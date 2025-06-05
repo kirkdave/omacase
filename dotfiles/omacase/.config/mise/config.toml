@@ -1,4 +1,5 @@
 [tools]
+"asdf:mise-plugins/mise-dotnet" = "9.0"
 node = "22"
 ruby = "3.4"
 

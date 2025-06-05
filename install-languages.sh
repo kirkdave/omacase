@@ -7,3 +7,6 @@ mise x ruby -- gem install bundler rails --no-document
 echo -e "Installing NodeJS and critical packages..."
 mise use --global node@22
 mise x node -- npm install --global npm@11.1.0 pnpm yarn
+
+echo -e "Installing Dotnet..."
+mise use --global asdf:mise-plugins/mise-dotnet@9.0
