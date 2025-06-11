@@ -1,4 +1,5 @@
 brew "awscli"
+brew "azure-cli"
 brew "coreutils"
 brew "eza"
 brew "fzf"
