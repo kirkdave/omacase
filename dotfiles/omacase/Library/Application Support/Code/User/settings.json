@@ -36,4 +36,57 @@
     "http.experimental.systemCertificatesV2": true,
     "http.proxySupport": "on",
     "workbench.colorTheme": "Catppuccin Mocha",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "BE51378D-D0B3-46AF-9355-419B853FDF2B"
+        }
+    ],
+    "mssql.connections": [
+        {
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "profileName": "Flock.NET Local",
+            "server": "localhost",
+            "user": "sa",
+            "password": "",
+            "savePassword": true,
+            "trustServerCertificate": true,
+            "encrypt": "Optional",
+            "groupId": "BE51378D-D0B3-46AF-9355-419B853FDF2B",
+            "id": "D767C98E-B5BB-4BE7-B707-B9D5118A40DB"
+        },
+        {
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "profileName": "Northwind Local",
+            "server": "localhost",
+            "trustServerCertificate": true,
+            "user": "sa",
+            "password": "",
+            "encrypt": "Optional",
+            "groupId": "BE51378D-D0B3-46AF-9355-419B853FDF2B",
+            "id": "64D008F6-9BC7-4A08-B9C0-629B8534F5F1",
+            "profileSource": 0,
+            "savePassword": true
+        }
+    ],
+    "files.associations": {
+        "NuGet.config": "xml",
+        "Nuget.config": "xml"
+    },
 }
