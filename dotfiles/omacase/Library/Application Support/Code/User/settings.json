@@ -21,7 +21,6 @@
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.tabs.enabled": true,
     "window.zoomLevel": 0.25,
-    "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 18,
@@ -34,4 +33,7 @@
     "amazonQ.suppressPrompts": {
         "amazonQChatDisclaimer": true
     },
+    "http.experimental.systemCertificatesV2": true,
+    "http.proxySupport": "on",
+    "workbench.colorTheme": "Catppuccin Mocha",
 }
