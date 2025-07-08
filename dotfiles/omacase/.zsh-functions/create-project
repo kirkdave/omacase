@@ -1,12 +1,26 @@
 #!/usr/bin/env zsh
 
-CLIENT_NAME=$(gum input --prompt "What's the client name? " --placeholder "e.g KirkDave, BJSS")
-PROJECT_NAME=$(gum input --prompt "What's the name of the project? " --placeholder "e.g. super-cool-project")
+BASE_DIR="$HOME/Consulting"
+CLIENT_NAME=$(gum input --prompt "What's the client name? (no spaces) " --placeholder "e.g KirkDave, BJSS")
+PROJECT_NAME=$(gum input --prompt "What's the name of the project? (no spaces) " --placeholder "e.g. super-cool-project")
 
-if [ -d $HOME/Projects/$CLIENT_NAME/$PROJECT_NAME ]; then
+CLIENT_DIR="$BASE_DIR/$CLIENT_NAME"
+PROJECT_DIR="$CLIENT_DIR/$PROJECT_NAME"
+
+if [ -d $$PROJECT_DIR ]; then
     echo -e "$(tput setf 3)The project $PROJECT_NAME already exists for client $CLIENT_NAME$(tput sgr0)"
     return
 fi
 
-mkdir -p $HOME/Projects/$CLIENT_NAME/$PROJECT_NAME/{docs,repos,scratch}
-echo -e "Project directory $HOME/Projects/$CLIENT_NAME/$PROJECT_NAME created"
+mkdir -p "$CLIENT_DIR/_admin"
+mkdir -p "$CLIENT_DIR/_client-facing"
+mkdir -p "$CLIENT_DIR/zz-archive"
+
+mkdir -p "$PROJECT_DIR/admin"
+mkdir -p "$PROJECT_DIR/code"
+mkdir -p "$PROJECT_DIR/client-facing"
+mkdir -p "$PROJECT_DIR/reference"
+mkdir -p "$PROJECT_DIR/sandbox"
+mkdir -p "$PROJECT_DIR/zz-archive"
+
+echo -e "Project directory $PROJECT_DIR created"
