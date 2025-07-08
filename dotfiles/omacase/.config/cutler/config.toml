@@ -44,4 +44,4 @@ NSTableViewDefaultSizeMode = 1
 tapBehaviour = 1
 
 [commands.background]
-run = "osascript -e 'tell application \"System Events\" to tell every desktop to set picture to \"~/.config/backgrounds/abstract-3d-render.jpg\" as POSIX file'"
+run = "osascript -e 'tell application \"System Events\" to tell every desktop to set picture to \"~/.config/cutler/backgrounds/abstract-3d-render.jpg\" as POSIX file'"
