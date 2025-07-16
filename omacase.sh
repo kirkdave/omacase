@@ -47,6 +47,17 @@ for custom in custom/*.sh(N); do
 	source $custom;
 done
 
+echo -e "Setting up base file structure..."
+WORK_DIR=$HOME/Work
+mkdir -p $WORK_DIR
+mkdir -p $WORK_DIR/{Clients,Archive}
+mkdir -p $WORK_DIR/Internal/{Resources,Docs,Scratch}
+mkdir -p $WORK_DIR/Internal/Resources/{Templates,Branding,References,Snippets}
+mkdir -p $WORK_DIR/Archive/Internal/{Resources,Docs}
+mkdir -p $WORK_DIR/Archive/Clients
+ln -sf $WORK_DIR/Archive/Clients $HOME/Clients/Past
+unset WORK_DIR
+
 echo -e "Applying macOS settings..."
 cutler apply
 
