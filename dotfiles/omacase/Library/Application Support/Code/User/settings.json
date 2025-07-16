@@ -87,6 +87,8 @@
     ],
     "files.associations": {
         "NuGet.config": "xml",
-        "Nuget.config": "xml"
+        "Nuget.config": "xml",
+        "*.mdc": "markdown"
     },
+    "editor.detectIndentation": false,
 }
