@@ -23,6 +23,7 @@ mkdir -p $CLIENT_DIR/_presentations/
 mkdir -p $PROJECT_DIR/
 mkdir -p $PROJECT_DIR/docs/
 mkdir -p $PROJECT_DIR/code/
+mkdir -p $PROJECT_DIR/designs/
 mkdir -p $PROJECT_DIR/resources/
 
 
