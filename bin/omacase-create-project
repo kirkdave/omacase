@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+CLIENTS_DIR=$HOME/Workspace/clients
+
+CLIENT_NAME=$1
+PROJECT_NAME=$2
+
+if [[ -z $CLIENT_NAME || -z $PROJECT_NAME ]]; then
+  echo -e "Usage: omacase-create-project <client-name> <project-name>"
+  exit 1
+fi
+
+CLIENT_DIR=$CLIENTS_DIR/$CLIENT_NAME
+PROJECT_DIR=$CLIENT_DIR/$PROJECT_NAME
+
+if [[ -d $PROJECT_DIR ]]; then
+  echo -e "The project $PROJECT_NAME for $CLIENT_NAME already exists!"
+  exit 1
+fi
+
+mkdir -p $CLIENT_DIR/_admin/
+mkdir -p $CLIENT_DIR/_presentations/
+mkdir -p $PROJECT_DIR/
+mkdir -p $PROJECT_DIR/docs/
+mkdir -p $PROJECT_DIR/code/
+mkdir -p $PROJECT_DIR/resources/
+
+

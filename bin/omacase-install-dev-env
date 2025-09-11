@@ -1,0 +1,68 @@
+#!/bin/zsh
+
+if [[ -z $1 ]]; then
+  echo -e "Usage: omacase-install-dev-env <bun|dotnet|go|java|java17|node|ruby>"
+  exit 1
+fi
+
+install_bun() {
+  echo -e "Installing Bun...\n"
+  mise use --global bun@latest
+}
+
+install_dotnet() {
+  echo -e "Installing Dotnet...\n"
+  mise use --global dotnet@8
+}
+
+install_go() {
+  echo -e "Installing Go...\n"
+  mise use --global go@latest
+}
+
+install_java() {
+  echo -e "Installing Java...\n"
+  mise use --global java@21
+}
+
+install_java17() {
+    echo -e "Installing Java v17...\n"
+    mise use --global java@17
+  }
+
+install_node() {
+  echo -e "Installing Node.js...\n"
+  mise use --global node@lts
+  mise x node@lts -- npm install -g yarn pnpm
+}
+
+install_ruby() {
+  echo -e "Installing Ruby...\n"
+  mise use --global ruby@latest
+  mise settings add idiomatic_version_file_enable_tools ruby
+  mise x ruby -- gem install rails --no-document
+}
+
+case "$1" in 
+  bun)
+    install_bun
+    ;;
+  dotnet)
+    install_dotnet
+    ;;
+  go)
+    install_go
+    ;;
+  java)
+    install_java
+    ;;
+  java17)
+    install_java17
+    ;;
+  node)
+    install_node
+    ;;
+  ruby)
+    install_ruby
+    ;;
+esac

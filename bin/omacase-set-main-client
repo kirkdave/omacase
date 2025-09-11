@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+WORKSPACE=$HOME/Workspace 
+CLIENT=$1
+CLIENTS_DIR=$WORKSPACE/clients
+
+if [[ -z $CLIENT ]]; then
+  echo -e "Usage: omacase-set-main-client <client>"
+  exit 1
+fi
+
+if [[ ! -d $CLIENTS_DIR/$CLIENT ]]; then
+  echo -e "Client $CLIENT doesn't exist. Create a project for the client with `omacase-create-project`"
+  exit 1
+fi
+
+ln -snf $CLIENTS_DIR/$CLIENT $WORKSPACE/main
+echo -e "Main client set to $CLIENT!"

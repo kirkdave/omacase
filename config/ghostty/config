@@ -1,0 +1,19 @@
+auto-update = download
+auto-update-channel = stable
+
+background-blur-radius = 16
+background-opacity = 0.875
+
+font-family = JetBrainsMonoNL NFM
+font-family-bold = JetBrainsMonoNL NFM Bold
+font-family-italic = JetBrainsMonoNL NFM Italic
+font-family-bold-italic = JetBrainsMonoNL NFM Bold Italic
+font-size = 16
+
+shell-integration = zsh
+
+
+window-padding-x = 12
+window-padding-y = 12
+
+config-file = theme

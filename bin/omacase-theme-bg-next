@@ -1,0 +1,35 @@
+#!/bin/zsh
+
+# Cycles through background images in current theme
+
+BACKGROUNDS_DIR=$HOME/.config/omacase/current/theme/backgrounds
+CURRENT_BACKGROUND_LINK=$HOME/.config/omacase/current/background
+BACKGROUNDS=(~BACKGROUNDS_DIR/**/*(.on))
+TOTAL=${#BACKGROUNDS[@]}
+
+if [[ TOTAL -eq 0 ]]; then
+  # revert to a simple default
+  echo -e "Theme has no backgrounds"
+else
+  # Get the current background from the symlink
+  if [[ -L $CURRENT_BACKGROUND_LINK ]]; then
+    CURRENT_BACKGROUND=$(readlink $CURRENT_BACKGROUND_LINK)
+  else
+    # Default to first background if no symlink for current background
+    CURRENT_BACKGROUND=""
+  fi
+
+
+  INDEX=${BACKGROUNDS[(i)$CURRENT_BACKGROUND]}
+  (( INDEX )) || INDEX=-1   # if not found, force -1
+  # Get the next background
+  if [[ $INDEX -eq -1 ]]; then
+    NEW_BACKGROUND=${BACKGROUNDS[1]} # Arrays are 1 based in zsh
+  else
+    NEXT_INDEX=$(((INDEX % TOTAL) + 1))
+    NEW_BACKGROUND=${BACKGROUNDS[$NEXT_INDEX]}
+  fi
+
+  ln -snf $NEW_BACKGROUND $CURRENT_BACKGROUND_LINK
+  osascript -e 'tell application "System Events" to tell every desktop to set picture to POSIX file "'"$CURRENT_BACKGROUND_LINK"'"'
+fi
