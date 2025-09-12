@@ -19,5 +19,6 @@ if [[ ! -d $THEME_PATH ]]; then
 fi
 
 ln -snf $THEME_PATH $CURRENT_THEME_DIR
+source $CURRENT_THEME_DIR/vscode.sh
 
 omacase-theme-bg-next

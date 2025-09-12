@@ -11,3 +11,4 @@ $HOME/.local/share/omacase/bin/omacase-theme-bg-next
 # Set specific app themes
 ln -snf $HOME/.config/omacase/current/theme/neovim.lua $HOME/.config/nvim/lua/plugins/theme.lua
 ln -snf $HOME/.config/omacase/current/theme/ghostty $HOME/.config/ghostty/theme
+source $HOME/.config/omacase/current/theme/vscode.sh
