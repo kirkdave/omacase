@@ -18,6 +18,7 @@ source $OMACASE_INSTALL/preflight/show-env.sh
 # Packaging
 source $OMACASE_INSTALL/packages.sh
 source $OMACASE_INSTALL/packaging/lazyvim.sh
+source $OMACASE_INSTALL/packaging/vscode.sh
 
 # Configuration
 source $OMACASE_INSTALL/config/config.sh
