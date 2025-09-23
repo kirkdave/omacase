@@ -5,6 +5,8 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
+INSTALLED_EXTENSIONS=$(code --list-extensions)
+
 install_bun() {
   echo -e "Installing Bun...\n"
   mise use --global bun@latest
@@ -41,6 +43,14 @@ install_ruby() {
   mise use --global ruby@latest
   mise settings add idiomatic_version_file_enable_tools ruby
   mise x ruby -- gem install rails --no-document
+
+  if [[ $INSTALLED_EXTENSIONS != *"shopify.ruby-extensions-pack"* ]]; then
+    code --install-extension shopify.ruby-extensions-pack
+  fi
+  TMP_LAZYVIM_SETTINGS=$(mktemp)
+  jq --arg plugin "lazyvim.plugins.extras.lang.ruby" '.extras |= if index($plugin) then . else . + [$plugin] end' $HOME/.config/nvim/lazyvim.json >"$TMP_LAZYVIM_SETTINGS" &&
+    mv "$TMP_LAZYVIM_SETTINGS" $HOME/.config/nvim/lazyvim.json
+
 }
 
 case "$1" in 
