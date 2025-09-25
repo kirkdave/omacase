@@ -35,6 +35,13 @@ install_java17() {
 install_node() {
   echo -e "Installing Node.js...\n"
   mise use --global node@lts
+  if [[ -f $HOME/.custom-ca-bundle.pem ]]; then
+    NODE_EXTRA_CA_CERTS=$HOME/.custom-ca-bundle.pem
+    nodeCustomCaExported=$(grep '^export NODE_EXTRA_CA_CERTS' $HOME/.zshrc)
+    if [[ -z "$nodeCustomCaExported" ]]; then
+      echo 'export NODE_EXTRA_CA_CERTS="$HOME/.custom-ca-bundle.pem"' >> $HOME/.zshrc
+    fi
+  fi
   mise x node@lts -- npm install -g yarn pnpm
 }
 
