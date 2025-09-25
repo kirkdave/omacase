@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+PERSONAL_DEV_DIR=$HOME/Workspace/personal-dev
+
+PROJECT_NAME=$1
+
+if [[ -z $PROJECT_NAME ]]; then
+  echo -e "Usage: omacase-create-personal-dev <project-name>"
+  exit 1
+fi
+
+PROJECT_DIR=$PERSONAL_DEV_DIR/$PROJECT_NAME
+
+if [[ -d $PROJECT_DIR ]]; then
+  echo -e "The project $PROJECT_NAME already exists!"
+  exit 1
+fi
+
+mkdir -p $PROJECT_DIR/
+mkdir -p $PROJECT_DIR/docs/
+mkdir -p $PROJECT_DIR/code/
+mkdir -p $PROJECT_DIR/designs/
+mkdir -p $PROJECT_DIR/resources/
+
+
