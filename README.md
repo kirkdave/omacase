@@ -16,7 +16,18 @@ Some of the applications and macOS settings cannot be automated. The following s
 2. Disable the Convert to Chinese shortcuts (These can interfere with the Hyper Key config). System Preferences --> Keyboard --> Keyboard Shortcuts --> Services --> Text
 3. Open Raycast and configure it to open on login
 4. Ensure you grant Raycast access to your files and folders and Accessibility (required for Hyper key)
-5. Import the Raycast config from `~/.config/raycast`. Password: `omacase`
+5. Import the Raycast config from `~/.config/raycast`
+
+## Usage
+
+### Raycast
+
+| Hotkey | Action |
+| ------ | ------ |
+| `Left Cmd + Space` | Launcher |
+| `Right Cmd` | Hyper (`Ctrl + Option + Shift + Command`) |
+| `Hyper + Return` | Launch Ghostty |
+| `Hyper + Space` | Launch Browser (MS Edge) |
 
 ## License
 
