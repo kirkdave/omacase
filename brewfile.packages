@@ -7,3 +7,5 @@ brew "make"
 brew "unzip"
 brew "gcc"
 brew "fd"
+brew "starship"
+

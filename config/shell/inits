@@ -1,2 +1,6 @@
 # Ensure we have homebrew installed binaries in our PATH
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
+if command -v starship &>/dev/null; then
+  eval "$(starship init zsh)"
+fi
