@@ -34,6 +34,16 @@ install() {
 	for dir in "./config"/*/; do
 		echo "$(basename "$dir")"
 	done
+
+	section "Setting up the shell..."
+	cat >"$HOME/.zshrc" <<'EOF'
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
+
+# Load shared shell configuration
+source ~/.config/shell/all
+EOF
+	echo 'source ~/.zshrc' >"$HOME/.zprofile"
 }
 
 # Use a function call to prevent brew installs from stealing stdin
