@@ -5,6 +5,12 @@ tailf() {
 	tail -f $1 | bat --paging=never -l log
 }
 
+# Git
+alias g="git"
+alias gcm="git commit -m"
+alias gca="git commit -a -m"
+alias ga="git add"
+
 # File System
 alias ls="eza -lh --group-directories-first --icons=auto"
 alias la="ls -a"
