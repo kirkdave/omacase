@@ -8,4 +8,7 @@ brew "unzip"
 brew "gcc"
 brew "fd"
 brew "starship"
-
+brew "fzf"
+brew "zoxide"
+brew "eza"
+brew "bat"

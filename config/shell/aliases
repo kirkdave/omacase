@@ -1,0 +1,35 @@
+# Tools
+alias vim="nvim"
+alias vi="nvim"
+tailf() {
+	tail -f $1 | bat --paging=never -l log
+}
+
+# File System
+alias ls="eza -lh --group-directories-first --icons=auto"
+alias la="ls -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias lta="lt -a"
+
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+alias cd="zd"
+zd() {
+	if (( $# == 0 )); then
+		builtin cd ~ || return
+	elif [[ -d $1 ]]; then
+		builtin cd "$1" || return
+	else
+		if ! z "$@"; then
+			echo "Error: Directory not found"
+			return 1
+		fi
+
+		printf "\U000F17A9 "
+		pwd
+	fi
+}
+
+open() (
+	xdg-open "$@" >/dev/null 2>&1 &
+)
