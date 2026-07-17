@@ -40,6 +40,9 @@ install() {
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
+# Load zsh options, keybindings and completions
+source ~/.config/shell/zoptions
+
 # Load shared shell configuration
 source ~/.config/shell/all
 EOF

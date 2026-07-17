@@ -1,0 +1,1 @@
+for fnc in "$HOME"/.config/shell/funcs/*; do source "$fnc"; done
