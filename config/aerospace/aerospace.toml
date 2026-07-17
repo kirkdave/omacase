@@ -66,10 +66,10 @@ persistent-workspaces = [
     ctrl-shift-cmd-alt-k = 'focus down'
     ctrl-shift-cmd-alt-j = 'focus up'
 
-    alt-left  = 'move left'
-    alt-down  = 'move down'
-    alt-up    = 'move up'
-    alt-right = 'move right'
+    cmd-left  = 'move left'
+    cmd-down  = 'move down'
+    cmd-up    = 'move up'
+    cmd-right = 'move right'
 
     ctrl-shift-cmd-alt-minus = 'resize smart -50'
     ctrl-shift-cmd-alt-equal = 'resize smart +50'
