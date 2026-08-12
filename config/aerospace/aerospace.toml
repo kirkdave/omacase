@@ -76,6 +76,8 @@ persistent-workspaces = [
 
     ctrl-shift-cmd-alt-b = 'balance-sizes'
 
+    ctrl-shift-cmd-alt-leftSquareBracket = 'layout tiles horizontal vertical'
+
     # Workspace switching (number-based)
     ctrl-shift-cmd-alt-1 = 'workspace 1'
     ctrl-shift-cmd-alt-2 = 'workspace 2'
