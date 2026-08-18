@@ -55,6 +55,13 @@ persistent-workspaces = [
 [[on-window-detected]]
     if.app-id = "com.spotify.client"
     run = 'layout tiling'
+[[on-window-detected]]
+    if.app-id = "com.microsoft.Outlook"
+    run = "layout tiling"
+
+[[on-window-detected]]
+    if.app-id = "com.microsoft.teams2"
+    run = "layout tiling"
 
 [mode.main.binding]
     # ctrl-shift-option-cmd = Hyper key (Right Cmd configured in Raycast)
