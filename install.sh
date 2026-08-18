@@ -47,6 +47,14 @@ source ~/.config/shell/zoptions
 source ~/.config/shell/all
 EOF
 	echo 'source ~/.zshrc' >"$HOME/.zprofile"
+
+	section "Installing dev environments..."
+	selected_langs=$(gum choose --no-limit --height=15 \
+		--selected="node" --selected="ruby" \
+		"node" "ruby" "python" "go" "rust" "java" "php" "elixir" "deno" "bun" "zig")
+	while IFS= read -r lang; do
+		[[ -n "$lang" ]] && mise use -g "$lang" || true
+	done <<< "$selected_langs"
 }
 
 # Use a function call to prevent brew installs from stealing stdin
