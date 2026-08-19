@@ -26,6 +26,11 @@ install() {
 	/opt/homebrew/bin/brew bundle install --file ./brewfile.packages
 
 	section "Installing applicaitons..."
+    	local custom_ca_path="$HOME/.custom-ca-certificates.pem"
+	if [[ -f "$custom_ca_path" ]]; then
+    		echo "There are custom CA certs"
+    		grep -qxF "ENV[\"NODE_EXTRA_CA_CERTS\"] = \"$custom_ca_path\"" ./brewfile.applicaitons || echo "ENV[\"NODE_EXTRA_CA_CERTS\"] = \"$custom_ca_path\"" >> ./brewfile.applicaitons
+	fi
 	/opt/homebrew/bin/brew bundle install --file ./brewfile.applicaitons
 
 	section "Configuring applications & packages..."

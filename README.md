@@ -1,12 +1,18 @@
-# OmacASE
+# oMACase
 
-OmacASE is an opinionated setup of macOS, hugely influenced by Omakub and [Omarchy](https://github.com/basecamp/omarchy)
+oMACase is an opinionated setup of macOS, hugely influenced by Omakub, [Omarchy](https://github.com/basecamp/omarchy) and [Omamac](https://github.com/omacom-io/omamac)
 
 It has been created to meet my needs. It might be useful to you but I would strongly suggest you fork your own version and make it yours.
 
 I will make changes as I my needs require, at times without backwards compatibility. Again, if you think this repo will be useful, take your own fork, make it yours and keep control.
 
 ## Manual Steps
+
+### Custom Root CA's
+
+I often sit behind corporate firewalls/proxys that intercept HTTPS requests. Whilst most apps use the certificate chains in keychain, VS Code CLI (and Homebrew VS Code extension installs) need custom ca certs provided.
+
+**Before** running the `install.sh` file, you should export the relevant root CAs to `~/.custom-ca-certificates.pem` (`chrome://settings/security` is our friend here)
 
 Some of the applications and macOS settings cannot be automated. The following steps are needed to finish the setup of a new system
 
