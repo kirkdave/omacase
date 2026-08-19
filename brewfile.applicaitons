@@ -4,3 +4,12 @@ cask "raycast"
 cask "nikitabobko/tap/aerospace", trusted: true
 cask "visual-studio-code"
 cask "copilot-cli"
+
+# Fonts
+
+cask "font-dm-mono"
+cask "font-dm-sans"
+cask "font-dm-serif-display"
+cask "font-dm-serif-text"
+cask "font-jetbrains-mono-nerd-font"
+cask "kirkdave/custom-formulas/font-dm-mono-nerd", trusted: true

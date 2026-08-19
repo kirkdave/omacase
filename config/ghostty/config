@@ -1,6 +1,11 @@
 theme = Catppuccin Mocha
 
+font-family = "DMMono Nerd Font"
 font-size = 15
+font-style = "Light"
+font-style-bold = "Medium"
+font-style-italic = "Light Italic"
+font-style-bold-italic = "Medium Italic"
 
 window-padding-x = 12
 window-padding-y = 12
