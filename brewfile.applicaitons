@@ -1,3 +1,4 @@
+cask "docker-desktop"
 cask "ghostty"
 cask "raycast"
 cask "nikitabobko/tap/aerospace", trusted: true
