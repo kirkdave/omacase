@@ -3,6 +3,7 @@ custom_ca_file_path = "#{ENV['HOME']}/.custom-ca-certificates.pem"
 
 if File.exist? 	custom_ca_file_path
 	ENV["NODE_EXTRA_CA_CERTS"] = custom_ca_file_path
+	ENV["SSL_CERT_FILE"] = custom_ca_file_path
 end
 
 # Applications
