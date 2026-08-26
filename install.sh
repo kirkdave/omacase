@@ -52,7 +52,8 @@ EOF
 	section "Installing custom applications..."
 	selected_apps=$(gum choose --no-limit --height=15 \
 		--selected="claude-code@latest" \
-		"claude-code@latest")
+		--selected="chatgpt" \
+		"claude-code@latest" "chatgpt" "copilot-cli")
 	while IFS= read -r app; do
 		[[ -n "$app" ]] && brew install --cask "$app" || true
 	done <<< "$selected_apps"
