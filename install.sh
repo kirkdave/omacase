@@ -34,6 +34,7 @@ install() {
 	for dir in "./config"/*/; do
 		echo "$(basename "$dir")"
 	done
+	ln -snf "$HOME/.config/code/settings.json" "$HOME//Library/Application Support/Code/User/settings.json"
 
 	section "Setting up the shell..."
 	cat >"$HOME/.zshrc" <<'EOF'
