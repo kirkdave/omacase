@@ -23,6 +23,7 @@ cask "font-dm-serif-display"
 cask "font-dm-serif-text"
 cask "font-jetbrains-mono-nerd-font"
 cask "kirkdave/custom-formulas/font-dm-mono-nerd", trusted: true
+cask "kirkdave/custom-formulas/font-modernline-personal", trusted: true
 
 # VS Code
 vscode "catppuccin.catppuccin-vsc"
