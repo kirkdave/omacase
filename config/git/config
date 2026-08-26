@@ -1,0 +1,7 @@
+[user]
+
+	name = "Dave Kirk"
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
