@@ -28,4 +28,4 @@ cask "kirkdave/custom-formulas/font-modernline-personal", trusted: true
 vscode "catppuccin.catppuccin-vsc"
 vscode "42crunch.vscode-openapi"
 vscode "davidanson.vscode-markdownlint"
-
+vscode "shopify.ruby-extensions-pack"
